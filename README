@@ -39,4 +39,9 @@ Commands to run :
     Running docker compose : docker-compose up
 
 
+Command to Run app : 
+========================
+1. mvn clean install 
+2. mvn spring-boot:run
+3. Alternatively to skip test run : mvn clean install -DskipTests
 

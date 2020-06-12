@@ -1,0 +1,42 @@
+Stock Market Server app is developed using :
+===============================================
+
+Spring Boot
+JDK 1.8
+Mongodb 4.2.0
+
+Application is running on port : 8080 , hostName : localhost
+Local MongoDB is running on port : 27017
+
+Testing :
+==============
+Testing can be done via POSTMAN / Google REST API plugin tools.
+
+API exposed :
+==============
+1. Create a new record : http://localhost:8080/api/create
+2. Find existing record : http://localhost:8080/api/find/{stockName}
+3. http://localhost:8080/api/upload
+        In  Body : give type : form-data
+        Key : file
+        Value :  Change dropdown value from Text to File and you will see : Select files option.
+        Select the dow_jones_index.data from the project path ( from resource folder)
+
+MongoDo Details :
+==================
+    API will create a new collection if not existing . Collection name is : stockmarkets
+    Model / Domain : StockDomain
+
+Design Patterns:
+=====================
+    Spring MVC using REST Webservices , Services , Repository / DAO  ,Template
+
+Docker:
+===========
+Commands to run :
+    Creating docker image : docker build -t api-docker-image .
+    Running docker image : docker run -d api-docker-image
+    Running docker compose : docker-compose up
+
+
+
